@@ -1,2 +1,2 @@
 export const SEQUELIZE = 'SEQUELIZE';
-export const FALSE = false;
+export const TEMPERAMENTS_REPOSITORY = 'TEMPERAMENTS_REPOSTORY';
