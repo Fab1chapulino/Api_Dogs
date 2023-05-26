@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 import { Sequelize } from 'sequelize-typescript';
 import { SEQUELIZE } from '../Constants';
+import { Temperament } from 'src/module/temperaments/temperaments.entity';
 
 dotenv.config();
 
@@ -12,7 +13,7 @@ export const databaseProviders = [{
       logging: false, // set to console.log to see the raw SQL queries
       native: false, // lets Sequelize know we can use pg-native for ~30% more speed
     });
-    sequelize.addModels([]);
+    sequelize.addModels([Temperament]);
     await sequelize.sync({ force:true });
     return sequelize;
   },
