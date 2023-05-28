@@ -14,6 +14,8 @@ export class BreedsTemperaments extends Model<BreedsTemperaments> {
     breedId;
 
   @ForeignKey(() => Temperament)
-  @Column
-    temperamentId:number;
+  @Column({
+    type:DataType.ARRAY(DataType.INTEGER),
+  })
+    temperamentId;
 }
