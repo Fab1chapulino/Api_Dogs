@@ -36,8 +36,8 @@ export class Breed extends Model<Breed> {
     type:DataType.STRING,
     allowNull:false,
   })
-    life_span;
+    lifeSpan;
 
   @BelongsToMany(() => Temperament, () => BreedsTemperaments)
-    temperaments: Temperament[];
+    temperaments: number[];
 }
