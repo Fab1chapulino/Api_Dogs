@@ -45,7 +45,7 @@ export class TemperamentsService {
   }
 
   async createTemps(temps: TemperamentDto[]):Promise<Temperament[]> {
-    const dbTemps = await this.tempsRepository.bulkCreate(temps);
+    const dbTemps = await this.tempsRepository.bulkCreate<Temperament>(temps);
     return dbTemps;
   }
 
