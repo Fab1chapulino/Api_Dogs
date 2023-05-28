@@ -5,6 +5,7 @@ import { TemperamentsController } from './temperaments.controller';
 
 @Module({
   providers: [...temperamentsProviders, TemperamentsService],
+  exports: [...temperamentsProviders, TemperamentsService],
   controllers: [TemperamentsController],
 })
 export class TemperamentsModule {}
