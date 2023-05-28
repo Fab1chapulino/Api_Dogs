@@ -6,13 +6,6 @@ import { Breed } from '../breeds/breeds.entity';
   timestamps:false,
 })
 export class Temperament extends Model<Temperament> {
-  @Column({ 
-    autoIncrement: true,
-    allowNull: false,
-    primaryKey: true,
-    type: DataType.INTEGER,
-  })
-    id;
 
   @Column({
     unique: true,
